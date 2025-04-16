@@ -34,7 +34,8 @@ public class DrawShapes extends JFrame
     public enum ShapeType {
         SQUARE,
         CIRCLE,
-        RECTANGLE
+        RECTANGLE,
+        TRIANGLE
     }
     
     private DrawShapesPanel shapePanel;
@@ -112,6 +113,9 @@ public class DrawShapes extends JFrame
                                 100, 
                                 200,
                                 color));
+                    } else if (shapeType == ShapeType.TRIANGLE) {
+                        push();
+                        scene.addShape(new Triangle(color, e.getPoint(), 100));
                     }
                     
                 } else if (e.getButton()==MouseEvent.BUTTON2) {
@@ -339,6 +343,18 @@ public class DrawShapes extends JFrame
                 shapeType = ShapeType.RECTANGLE;
             }
         });
+
+        // Triangle
+        JMenuItem triangleItem = new JMenuItem("Triangle");
+        shapeMenu.add(triangleItem);
+        triangleItem.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                System.out.println("Triangle");
+                shapeType = ShapeType.TRIANGLE;
+            }
+        });
+
         
         // operation mode menu
         JMenu operationModeMenu=new JMenu("Operation");
