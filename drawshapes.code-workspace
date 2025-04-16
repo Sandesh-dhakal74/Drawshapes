@@ -1,0 +1,34 @@
+{
+    "folders": [
+      {
+        "path": "."
+      }
+    ],
+    "settings": {
+      "java.project.referencedLibraries": [
+        "lib/*.jar"
+      ],
+      "java.project.sourcePaths": [
+        "src"
+      ],
+      "java.configuration.updateBuildConfiguration": "automatic",
+      "java.debug.settings.console": "integratedTerminal"
+    },
+    
+    "launch": {
+      "configurations": [
+        {
+          "type": "java",
+          "name": "Launch Any Main",
+          "request": "launch",
+          "mainClass": "",
+          "projectName": "drawshapes220"
+        }
+      ]
+    },
+    "extensions": {
+      "recommendations": [
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  }

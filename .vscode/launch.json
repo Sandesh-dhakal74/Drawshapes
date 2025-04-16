@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "DrawShapes",
+            "request": "launch",
+            "mainClass": "drawshapes.DrawShapes",
+            "projectName": ""
+        }
+    ]
+}
